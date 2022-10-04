@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
 const CardSchema = new Schema({
   userName: {
@@ -14,8 +14,12 @@ const CardSchema = new Schema({
     type: Boolean,
     default: true,
   },
-});
+  year: {
+    type: String,
+    required: [true, "Year is required"],
+  },
+})
 
-const Cards = mongoose.model("cards", CardSchema);
+const Cards = mongoose.model("cards", CardSchema)
 
-module.exports = Cards;
+module.exports = Cards
